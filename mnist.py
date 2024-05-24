@@ -136,7 +136,7 @@ def main():
     train_loader = torch.utils.data.DataLoader(
         datasets.FashionMNIST("./data",
                               train=True,
-                              download=True,
+                              download=False,
                               transform=transforms.Compose([
                                   transforms.ToTensor()
                               ])),
@@ -145,6 +145,7 @@ def main():
     test_loader = torch.utils.data.DataLoader(
         datasets.FashionMNIST("./data",
                               train=False,
+                              download=False,
                               transform=transforms.Compose([
                                   transforms.ToTensor()
                               ])),
